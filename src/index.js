@@ -1,17 +1,61 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+// It will render the main component
+import ReactDom from "react-dom";
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+// Connecting the index.css file
+import "./index.css";
+
+// BookList
+function BookList() {
+  return (
+    <section className="bookList">
+      <Book />
+      <Book />
+      <Book />
+      <Book />
+      <Book />
+      <Book />
+      <Book />
+      <Book />
+    </section>
+  );
+}
+
+// Single Book
+const Book = () => {
+  return (
+    <article className="singleBook">
+      <BookThumbnail />
+      <BookTitle />
+      <BookAuthor />
+      <BookMaterial />
+      <BookPrice />
+    </article>
+  );
+};
+
+// Thumbnail
+const BookThumbnail = () => {
+  return (
+    <img
+      src="https://images-na.ssl-images-amazon.com/images/I/51G2Y+mbUpL._AC_UL604_SR604,400_.jpg"
+      alt="placeholder"
+      className="thumbnail"
+    />
+  );
+};
+
+// Title
+const BookTitle = () => <h1>The Last Thing He Told Me: A Novel</h1>;
+
+// Author
+const BookAuthor = () => <p>by Laura Dave</p>;
+
+// Material
+const BookMaterial = () => <p>Paperback</p>;
+
+// Price
+const BookPrice = () => <p>$9.99</p>;
+
+ReactDom.render(<BookList />, document.getElementById("root"));
