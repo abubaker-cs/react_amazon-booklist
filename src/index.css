@@ -20,6 +20,9 @@ h1{
     margin: .5em 0;
 }
 
+.thumbnail{
+}
+
 .bookList{
     width: 90vw;
     max-width: 1170px;
