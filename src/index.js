@@ -25,63 +25,29 @@ function BookList() {
   return (
     <section className="bookList">
       <Book />
-      <Book />
-      <Book />
-      <Book />
-      <Book />
-      <Book />
-      <Book />
-      <Book />
     </section>
   );
 }
 
 // Single Book
 const Book = () => {
+  const imageURL =
+    "https://images-na.ssl-images-amazon.com/images/I/51G2Y+mbUpL._AC_UL604_SR604,400_.jpg";
+  const title = "The Last Thing He Told Me: A Novel";
+  const author = "Laura Dave";
+  const bookMaterial = "Paperback";
+  const price = "$19.99";
+
   return (
     <article className="singleBook">
-      <BookThumbnail />
-      <BookTitle />
-      <BookAuthor />
-      <BookMaterial />
-      <BookPrice />
+      <img src={imageURL} alt="placeholder" className="thumbnail" />
+      <h1>{title}</h1>
+      <p className="bookAuthor">by {author}</p>
+      <p>{bookMaterial}</p>
+      <p>{price}</p>
     </article>
   );
 };
-
-// Thumbnail
-const BookThumbnail = () => {
-  return (
-    <img
-      src="https://images-na.ssl-images-amazon.com/images/I/51G2Y+mbUpL._AC_UL604_SR604,400_.jpg"
-      alt="placeholder"
-      className="thumbnail"
-    />
-  );
-};
-
-// Title
-const BookTitle = () => <h1>The Last Thing He Told Me: A Novel</h1>;
-
-// Author
-const BookAuthor = () => (
-  <p
-    style={{
-      color: "#617d98",
-      fontSize: "1.2rem",
-      fontWeight: "bold",
-      marginTop: "0.5em",
-    }}
-  >
-    by Laura Dave
-  </p>
-);
-
-// Material
-const BookMaterial = () => <p>Paperback</p>;
-
-// Price
-const BookPrice = () => <p>$9.99</p>;
 
 // ------------------------------------------------------------
 // Zurb Header

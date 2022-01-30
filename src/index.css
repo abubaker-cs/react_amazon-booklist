@@ -16,6 +16,10 @@ h1, h2, h3, h4, h5, h6{
     color: blue;
 }
 
+h1{
+    margin: .5em 0;
+}
+
 .bookList{
     width: 90vw;
     max-width: 1170px;
@@ -24,6 +28,13 @@ h1, h2, h3, h4, h5, h6{
     gap: 2rem;
 }
 
+.bookAuthor{
+    color: #f17d98;
+    font-size: 1.15rem;
+    font-weight: bold;
+    margin: .2em 0;
+
+}
 
 @media screen and (min-width:768px) {
     
