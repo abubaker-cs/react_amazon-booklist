@@ -8,7 +8,7 @@ body{
     background-color: #f1f5f8;
     font-family: -apple-system, "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", "宋体", "sans-serif";
     color: #222;
-    text-align: center;
+    /* text-align: center; */
 }
 
 
@@ -26,6 +26,7 @@ h1, h2, h3, h4, h5, h6{
 
 
 @media screen and (min-width:768px) {
+    
     .bookList{
         grid-template-columns: repeat(3, 1fr);
     }
@@ -34,7 +35,7 @@ h1, h2, h3, h4, h5, h6{
 
 
 .singleBook{
-    width: 360px;
+    width: 380px;
     background-color: #fff;
     overflow: hidden;
     padding: 1rem;
