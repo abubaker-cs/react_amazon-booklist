@@ -49,7 +49,12 @@ function BookList() {
         author={fourthBook.author}
         bookMaterial={fourthBook.bookMaterial}
         price={fourthBook.price}
-      />
+      >
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ipsa
+          similique obcaecati illum vel eius facilis vero tenetur est iste.
+        </p>
+      </Book>
       <Book
         img={thirdBook.img}
         title={thirdBook.title}
@@ -79,13 +84,18 @@ function BookList() {
 
 // Single Book
 const Book = (props) => {
+  const { img, title, author, bookMaterial, price, children } = props;
+
+  console.log(props);
+
   return (
     <article className="singleBook">
-      <img src={props.img} alt="placeholder" className="thumbnail" />
-      <h1>{props.title}</h1>
-      <p className="bookAuthor">by {props.author}</p>
-      <p>{props.bookMaterial}</p>
-      <p>{props.price}</p>
+      <img src={img} alt="placeholder" className="thumbnail" />
+      <h1>{title}</h1>
+      <p className="bookAuthor">by {author}</p>
+      <p>{bookMaterial}</p>
+      <p>{price}</p>
+      {children}
     </article>
   );
 };

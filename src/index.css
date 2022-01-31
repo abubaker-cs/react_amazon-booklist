@@ -43,6 +43,7 @@ h1{
     
     .bookList{
         grid-template-columns: repeat(3, 1fr);
+        align-items: start;
     }
 
 }
@@ -58,4 +59,8 @@ h1{
 
 .thumbnail{
     width: 100%;
+}
+
+.book p{
+    margin-top: 0.5rem;
 }
