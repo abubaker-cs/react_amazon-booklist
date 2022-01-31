@@ -49,7 +49,6 @@ function BookList() {
   return (
     <section className="bookList">
       {books.map((book) => {
-        const { img, title, author, bookMaterial, price } = book;
         return <Book book={book}></Book>;
       })}
       ;
@@ -59,10 +58,7 @@ function BookList() {
 
 // Single Book
 const Book = (props) => {
-  console.log(props);
   const { img, title, author, bookMaterial, price } = props.book;
-
-  console.log(props);
 
   return (
     <article className="singleBook">
